@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const Todo = ({ onClick, completed, text }) => (
+const Todo = ({ onClick, onDestroy, completed, text }) => (
   <li
     onClick={onClick}
     style={{
@@ -9,6 +9,7 @@ const Todo = ({ onClick, completed, text }) => (
     }}
   >
     {text}
+    <div onClick={onDestroy}>[X]</div>
   </li>
 )
 
